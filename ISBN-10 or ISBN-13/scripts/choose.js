@@ -1,8 +1,10 @@
-var sum = 0;
-var arr = [];
-var j = 0, i = 0 ;
 
-var isbn = "978-3-16-148410-0";
+export default function choise(str)
+{        
+    var arr = [];
+    var j = 0, i = 0 ;
+
+    var isbn = str;
 
 while (j <= isbn.length)
 {
@@ -12,23 +14,21 @@ while (j <= isbn.length)
 }  
 
 console.log(arr);
-
-export default function choise()
-{    
   switch(arr.length){
       case 10:
-      ISBN_10();
-      break;
+      if (ISBN_10(arr))  return true;
+      return false;
       case 13:
-      ISBN_13();
-      break;
+      if (ISBN_13(arr)) return true;
+      return false;
       default:
       return false;
   }
 
 }
-function ISBN_13()
+function ISBN_13(arr)
 {     
+    var sum = 0;
     for (let i = 0, k = 1; i <= arr.length - 1 ; k++, i++)
     {    
         if (k % 2 == 0)
@@ -44,8 +44,9 @@ function ISBN_13()
     else return false;      
 }
 
-function ISBN_10()
-{        
+function ISBN_10(arr)
+{    
+    var sum = 0;    
     for (let i = 0 , k=arr.length; i <=arr.length - 2 ;k--, i++)
     {    
         sum += arr[i] * k; 

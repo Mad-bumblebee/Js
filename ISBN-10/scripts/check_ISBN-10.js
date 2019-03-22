@@ -1,20 +1,22 @@
-var sum = 0;
-//var num = [];
-var arr = [];
-var isbn = "2-266-11156-6";
-//isbn += isbn.split('');
-export default function ISBN_10()
+
+export default function ISBN_10(str)
 { 
+   var sum = 0;
+   var arr = [];
+   var isbn = str;
    var j = 0, i = 0 ;
    
-   while (j <= isbn.length)
-   {
-    if(isFinite(isbn[j]))     
-        arr[i++] = isbn[j];         
-        j++;
-        
+   if (str.length >= 10){
+    while (j <= isbn.length)
+    {
+     if(isFinite(isbn[j]))     
+         arr[i++] = isbn[j];         
+         j++;
+         
+    }
+    console.log(arr);
    }
-   console.log(arr);
+  
    
     for (let i = 0 , k=arr.length; i <=arr.length - 2 ;k--, i++)
     {    

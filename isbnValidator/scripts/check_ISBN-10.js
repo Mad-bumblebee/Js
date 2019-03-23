@@ -6,7 +6,7 @@ export default function ISBN_10(str)
    var isbn = str;
    var j = 0, i = 0 ;
    
-   if (str.length >= 10){
+   if (str.length > 10){
     while (j <= isbn.length)
     {
      if(isFinite(isbn[j]))     

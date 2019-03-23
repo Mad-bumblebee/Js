@@ -16,7 +16,7 @@ while (j <= isbn.length)
 console.log(arr);
   switch(arr.length){
       case 10:
-      if (ISBN_10(arr))  return true;
+      if (ISBN_10(arr)) return true;
       return false;
       case 13:
       if (ISBN_13(arr)) return true;

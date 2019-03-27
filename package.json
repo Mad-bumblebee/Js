@@ -1,0 +1,26 @@
+{
+  "name": "index",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:w": "jest --watchAll",
+    "test:c": "jest --collectCoverage=true",
+    "test1": "jest ./check_ISBN-10.test",
+    "test2": "jest ./isbn13.test",
+    "test3": "jest ./choose.test",
+    "test4": "jest ./IsbnValidator.test",
+    "test5": "jest ./propnew.test",
+    "test6": "jest ./valofindex",
+    "test7": "jest ./low",
+    "test8": "jest ./Lowenstein"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "jest": "^23.6.0"
+  }
+}

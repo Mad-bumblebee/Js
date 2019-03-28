@@ -27,6 +27,5 @@ export default function ISBN_13(str)
     // console.log(sum);
     // console.log(typeof(sum));
     // console.log(arr.slice(0,3));
-    if (sum % 10 == 0 && (arr.slice(0,3) == '9','7','8' || arr.slice(0,3) == '9','7','9')) return true;
-    else return false;      
+    return (sum % 10 == 0 && (arr.slice(0,3) == '9','7','8' || arr.slice(0,3) == '9','7','9')) ? true: false;      
 }

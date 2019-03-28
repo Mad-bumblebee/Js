@@ -19,8 +19,7 @@ export default function ISBN_10(str)
         sum += arr[i] * k;      
     }
     console.log(sum);
-    if ((sum += parseInt(arr[arr.length - 1])) % 11 == 0) return true;
-    else return false;      
+    return (sum += parseInt(arr[arr.length - 1])) % 11 == 0 ? true : false;      
 }
        
   
